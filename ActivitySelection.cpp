@@ -25,7 +25,7 @@ vector<Activity> SelectActivity(vector<Activity>& act){
     return selectedAct;
 }
 
-int main() {
+int main(){
     vector<Activity> activities = {{1, 2}, {3, 4}, {0, 6}, {5, 7}, {8, 9}, {5, 9}};
     vector<Activity> result = SelectActivity(activities);
     

@@ -33,4 +33,4 @@ int main(){
     vector<int> arr = {12, 11, 13, 5, 6, 7};
     QuickSort(arr,0,arr.size()-1);
     PrintArray(arr);
-}
+} 

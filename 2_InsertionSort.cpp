@@ -21,7 +21,7 @@ int InsertionSort(vector<int>& arr){
     PrintArray(arr);
 }
 
-int main(){
+int main(){ 
     vector<int> arr = {1,7,5,3,2,8,6,10};
     InsertionSort(arr);
 }

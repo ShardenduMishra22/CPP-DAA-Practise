@@ -12,7 +12,7 @@ bool Cmp(Item a, Item b){
     return r1 > r2;
 }
 
-double Knapsack(int w, vector<Item>& itms){
+double Knapsack01(int w, vector<Item>& itms){
     sort(itms.begin(), itms.end(), Cmp);
 
     double TotalValue = 0.0;
@@ -35,6 +35,6 @@ int main(){
     vector<Item> itms = {{60, 10}, {100, 20}, {120, 30}};
     int W = 50;
 
-    cout << "Maximum value: " << Knapsack(W, itms) << endl;
+    cout << "Maximum value: " << Knapsack01(W, itms) << endl;
     return 0;
 }
