@@ -1,4 +1,7 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
 
 class Edge {
@@ -7,7 +10,7 @@ public:
     Edge(int s, int d, int w) : src(s), dest(d), weight(w) {}
 };
 
-bool cmp(const Edge &a, const Edge &b) {
+bool compareEdges(const Edge &a, const Edge &b) {
     return a.weight < b.weight;
 }
 
@@ -48,7 +51,7 @@ public:
 };
 
 vector<Edge> kruskalMST(int V, vector<Edge> &edges) {
-    sort(edges.begin(), edges.end(), cmp);
+    sort(edges.begin(), edges.end(), compareEdges);
 
     DisjointSet ds(V);
     vector<Edge> mst;
@@ -64,6 +67,7 @@ vector<Edge> kruskalMST(int V, vector<Edge> &edges) {
 }
 
 int main() {
+    int V = 4;
     vector<Edge> edges;
 
     edges.push_back(Edge(0, 1, 10));
